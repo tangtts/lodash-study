@@ -30,7 +30,11 @@ function toInteger(value) {
   var result = toFinite(value),
       remainder = result % 1;
 
+  // console.log(result,remainder,"remainder",result-remainder);
+
   return result === result ? (remainder ? result - remainder : result) : 0;
 }
+
+// console.log("🚀 ~ file", toInteger('3.2'));
 
 module.exports = toInteger;
