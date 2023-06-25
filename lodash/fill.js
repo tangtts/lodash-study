@@ -41,5 +41,7 @@ function fill(array, value, start, end) {
   }
   return baseFill(array, value, start, end);
 }
-
+var array = [1, 2, 3];
+ fill(array, 'a');
+console.log(array);
 module.exports = fill;
