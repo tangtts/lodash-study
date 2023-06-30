@@ -36,6 +36,7 @@ function baseSortedIndex(array, value, retHighest) {
     }
     return high;
   }
+  
   return baseSortedIndexBy(array, value, identity, retHighest);
 }
 

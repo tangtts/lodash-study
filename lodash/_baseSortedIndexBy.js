@@ -55,6 +55,7 @@ function baseSortedIndexBy(array, value, iteratee, retHighest) {
     } else {
       setLow = retHighest ? (computed <= value) : (computed < value);
     }
+    
     if (setLow) {
       low = mid + 1;
     } else {
