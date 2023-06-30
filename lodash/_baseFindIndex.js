@@ -18,6 +18,7 @@ function baseFindIndex(array, predicate, fromIndex, fromRight) {
       return index;
     }
   }
+  
   return -1;
 }
 

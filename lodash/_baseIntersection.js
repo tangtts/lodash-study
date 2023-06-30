@@ -27,16 +27,21 @@ function baseIntersection(arrays, iteratee, comparator) {
       maxLength = Infinity,
       result = [];
 
+
   while (othIndex--) {
     var array = arrays[othIndex];
     if (othIndex && iteratee) {
       array = arrayMap(array, baseUnary(iteratee));
     }
     maxLength = nativeMin(array.length, maxLength);
-    caches[othIndex] = !comparator && (iteratee || (length >= 120 && array.length >= 120))
+
+    caches[othIndex] = !comparator && (iteratee || 
+      (length >= 120 && array.length >= 120))
       ? new SetCache(othIndex && array)
       : undefined;
   }
+
+  // 取出第一个数组 [[2, 1],[2, 3]]
   array = arrays[0];
 
   var index = -1,

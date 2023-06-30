@@ -10,13 +10,13 @@ function baseIsMatch(object, source, matchData, customizer) {
   length = index,
   noCustomizer = !customizer;
   
-  console.log("🚀 ~ file: baseIsMatch.js:10 ~ baseIsMatch ~ index:", index);
   if (object == null) {
     return !length;
   }
 
   object = Object(object);
 
+  // 判断对象 的key 值是否在 [[]] 中
   while (index--) {
     var data = matchData[index];
 

@@ -15,7 +15,6 @@ var COMPARE_PARTIAL_FLAG = 1,
  * @param {Function} [customizer] The function to customize comparisons.
  * @returns {boolean} Returns `true` if `object` is a match, else `false`.
  */
-console.log("🚀 ~ file: _baseIsMatch.js:19 ~:", baseIsMatch({name:"zs"},{name:'zs'},[["name",'zs']]));
 function baseIsMatch(object, source, matchData, customizer) {
   var index = matchData.length,
       length = index,

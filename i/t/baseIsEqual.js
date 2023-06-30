@@ -1,7 +1,7 @@
 
 const isObjectLike = require("./isObjectLike");
-
-function baseIsEqual(value, other, bitmask, customizer, stack) {
+const isDeepEqual = require("./isDeepEqual")
+function baseIsEqual(value, other) {
   if (value === other) {
     return true;
   }
@@ -12,7 +12,7 @@ function baseIsEqual(value, other, bitmask, customizer, stack) {
   ) {
     return value !== value && other !== other;
   }
-  return;
+  return isDeepEqual(value,other);
 }
 
 module.exports = baseIsEqual

@@ -20,11 +20,14 @@ var arrayMap = require('./_arrayMap'),
  * _.intersection([2, 1], [2, 3]);
  * // => [2]
  */
-var intersection = baseRest(function(arrays) {
+var intersection = function(...arrays) {
+  // 对 arrays 的每一项进行判断是否是一个 arrayLike
   var mapped = arrayMap(arrays, castArrayLikeObject);
+  // [ [ 2, 1 ], [ 2, 3 ] ]
+  // console.log("🚀 ~ file: intersection.js:25 ~ intersection ~ mapped:", mapped);
   return (mapped.length && mapped[0] === arrays[0])
     ? baseIntersection(mapped)
     : [];
-});
+};
 
 module.exports = intersection;

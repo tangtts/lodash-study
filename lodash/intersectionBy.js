@@ -31,12 +31,13 @@ var arrayMap = require('./_arrayMap'),
 var intersectionBy = baseRest(function(arrays) {
   var iteratee = last(arrays),
       mapped = arrayMap(arrays, castArrayLikeObject);
-
   if (iteratee === last(mapped)) {
     iteratee = undefined;
   } else {
     mapped.pop();
   }
+
+
   return (mapped.length && mapped[0] === arrays[0])
     ? baseIntersection(mapped, baseIteratee(iteratee, 2))
     : [];
